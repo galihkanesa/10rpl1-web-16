@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap");
+
+:root {
+    color-scheme: dark;
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #0b1020;
+    color: #f5f7ff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 20px;
+    background:
+        radial-gradient(ellipse at 50% -15%, rgba(83, 92, 214, 0.25), transparent 45%),
+        radial-gradient(ellipse at 100% 65%, rgba(30, 116, 163, 0.12), transparent 35%),
+        #0b1020;
+}
+
+.container {
+    width: min(100%, 440px);
+    margin: 0 auto;
+}
+
+.header-chat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.header-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgba(165, 171, 255, 0.2);
+    border-radius: 14px;
+    background: linear-gradient(145deg, #252b56, #171c37);
+    color: #bfc2ff;
+    font-size: 21px;
+    cursor: pointer;
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.header-icon:hover {
+    transform: rotate(18deg);
+}
+
+.header-icon:focus-visible {
+    outline: 2px solid #a5aaff;
+    outline-offset: 3px;
+}
+
+.header-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.eyebrow,
+.profile-label {
+    color: #9099b8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.header-title {
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(91, 207, 156, 0.16);
+    border-radius: 999px;
+    background: rgba(42, 136, 99, 0.12);
+    color: #a5e7c6;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #5bd19b;
+    box-shadow: 0 0 10px rgba(91, 209, 155, 0.75);
+}
+
+.profile-card {
+    position: relative;
+    display: flex;
+    min-height: 168px;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    padding: 26px;
+    border: 1px solid rgba(157, 166, 255, 0.2);
+    border-radius: 24px;
+    background: linear-gradient(120deg, #242b57 0%, #202648 48%, #18233e 100%);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+.profile-glow {
+    position: absolute;
+    top: -80px;
+    right: -45px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(132, 119, 255, 0.19);
+    filter: blur(4px);
+}
+
+.profile-photo {
+    position: relative;
+    z-index: 1;
+    width: 92px;
+    height: 92px;
+    flex: 0 0 auto;
+    border: 3px solid rgba(255, 255, 255, 0.82);
+    border-radius: 50%;
+    background: #343d70;
+    object-fit: cover;
+    box-shadow: 0 7px 22px rgba(6, 9, 25, 0.35);
+}
+
+.profile-info {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+}
+
+.profile-label {
+    color: #b7bcf5;
+}
+
+.profile-info h1 {
+    margin: 6px 0 3px;
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: clamp(23px, 6vw, 29px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #c2c8e6;
+    font-size: 13px;
+}
+
+.profile-info p span {
+    margin-left: 4px;
+    color: #f6c96d;
+}
+
+.profile-sparkle {
+    position: absolute;
+    right: 22px;
+    bottom: 13px;
+    color: rgba(223, 225, 255, 0.72);
+    font-size: 32px;
+}
+
+.menu-section {
+    margin-top: 32px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    margin: 5px 0 0;
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.menu-count {
+    padding-bottom: 3px;
+    color: #79839f;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.menu-item {
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 16px;
+    border: 1px solid #242b3e;
+    border-radius: 17px;
+    background: linear-gradient(110deg, rgba(25, 31, 49, 0.96), rgba(20, 26, 43, 0.96));
+    color: #f5f7ff;
+    text-decoration: none;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.menu-item:hover,
+.menu-item:focus-visible {
+    transform: translateY(-2px);
+    border-color: #59628e;
+    background: linear-gradient(110deg, #222a43, #1c2740);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item:focus-visible {
+    outline: 2px solid #a5aaff;
+    outline-offset: 3px;
+}
+
+.menu-icon {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 14px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.icon-blue {
+    background: rgba(72, 142, 255, 0.15);
+    color: #82b5ff;
+}
+
+.icon-purple {
+    background: rgba(164, 115, 255, 0.15);
+    color: #bd9bff;
+}
+
+.icon-orange {
+    background: rgba(255, 174, 91, 0.14);
+    color: #ffc078;
+}
+
+.icon-green {
+    background: rgba(87, 207, 155, 0.13);
+    color: #84e0b3;
+}
+
+.github-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.menu-copy {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-copy strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.menu-copy small {
+    overflow: hidden;
+    color: #929bb3;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.menu-arrow {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid #343c53;
+    border-radius: 10px;
+    color: #aeb7d1;
+    font-size: 16px;
+    transition: transform 180ms ease, color 180ms ease;
+}
+
+.menu-item:hover .menu-arrow,
+.menu-item:focus-visible .menu-arrow {
+    transform: translate(2px, -2px);
+    color: #fff;
+}
+
+.page-footer {
+    margin-top: 27px;
+    color: #69738e;
+    font-size: 11px;
+    text-align: center;
+}
+
+.page-footer span {
+    color: #f08a9e;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 28px 16px;
+    }
+
+    .profile-card {
+        min-height: 150px;
+        gap: 16px;
+        padding: 21px 18px;
+    }
+
+    .profile-photo {
+        width: 78px;
+        height: 78px;
+    }
+}
+
+body[data-theme="light"] {
+    color-scheme: light;
+    background:
+        radial-gradient(ellipse at 50% -15%, rgba(111, 131, 255, 0.16), transparent 45%),
+        radial-gradient(ellipse at 100% 65%, rgba(74, 177, 205, 0.12), transparent 35%),
+        #f4f7ff;
+    color: #202943;
+}
+
+body[data-theme="light"] .header-icon {
+    border-color: #697386;
+    background: linear-gradient(145deg, #fff, #e9edfb);
+    color: #515f9d;
+}
+
+body[data-theme="light"] .eyebrow {
+    color: #697594;
+}
+
+body[data-theme="light"] .status {
+    border-color: #668b78;
+    background: rgba(42, 136, 99, 0.08);
+    color: #24734f;
+}
+
+body[data-theme="light"] .profile-card {
+    border-color: #697386;
+    background: linear-gradient(120deg, #e6eaff 0%, #eef0ff 48%, #e5f2ff 100%);
+    box-shadow: 0 18px 45px rgba(40, 55, 100, 0.12);
+}
+
+body[data-theme="light"] .profile-glow {
+    background: rgba(132, 119, 255, 0.16);
+}
+
+body[data-theme="light"] .profile-photo {
+    border-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 7px 22px rgba(40, 55, 100, 0.18);
+}
+
+body[data-theme="light"] .profile-label {
+    color: #626c9d;
+}
+
+body[data-theme="light"] .profile-info p {
+    color: #596681;
+}
+
+body[data-theme="light"] .menu-count {
+    color: #737e99;
+}
+
+body[data-theme="light"] .menu-item {
+    border-color: #697386;
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 255, 0.98));
+    color: #202943;
+    box-shadow: 0 5px 16px rgba(40, 55, 100, 0.05);
+}
+
+body[data-theme="light"] .menu-item:hover,
+body[data-theme="light"] .menu-item:focus-visible {
+    border-color: #3f4c68;
+    background: linear-gradient(110deg, #fff, #edf1ff);
+    box-shadow: 0 10px 25px rgba(40, 55, 100, 0.12);
+}
+
+body[data-theme="light"] .menu-copy small {
+    color: #697594;
+}
+
+body[data-theme="light"] .menu-arrow {
+    border-color: #8791a5;
+    color: #697594;
+}
+
+body[data-theme="light"] .menu-item:hover .menu-arrow,
+body[data-theme="light"] .menu-item:focus-visible .menu-arrow {
+    color: #39476f;
+}
+
+body[data-theme="light"] .github-logo {
+    filter: none;
+}
+
+body[data-theme="light"] .page-footer {
+    color: #737e99;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
